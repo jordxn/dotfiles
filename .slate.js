@@ -348,26 +348,6 @@ S.default(3, threeMonitorLayout);
 S.default(2, twoMonitorLayout);
 S.default(1, oneMonitorLayout);
 
-// Layout Operations
-/*
-var twoMonitor = S.op("layout", { "name" : twoMonitorLayout });
-var threeMonitor = S.op("layout", { "name" : threeMonitorLayout });
-var oneMonitor = S.op("layout", { "name" : oneMonitorLayout });
-var universalLayout = function() {
-  S.log("SCREEN COUNT: "+S.screenCount());
-  var screenCount = S.screenCount();
-  if (screenCount === 3) {
-    threeMonitor.run();
-  } else if (screenCount === 2) {
-    twoMonitor.run();
-  } else if (screenCount === 1) {
-    oneMonitor.run();
-  }
-};
-
-universalLayout();
-*/
-
 // ------ EVENTS -----
 S.on("windowOpened", function(event, win) {
   
@@ -388,45 +368,9 @@ S.on("windowOpened", function(event, win) {
  
 // ----- BINDING -----
 S.bnda({
-  // Layout Bindings
-  //"padEnter:ctrl" : universalLayout,
-  // "space:ctrl" : universalLayout,
 
   // Window Hints
   "pad*:alt;cmd" : S.op("hint"),
-
-
-  // Push Bindings
-  // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
-  /*
-  "right:ctrl;shift" : S.op("push", { "direction" : "right", "style" : "bar-resize:screenSizeX/2" }),
-  "left:ctrl;shift" : S.op("push", { "direction" : "left", "style" : "bar-resize:screenSizeX/2" }),
-  "up:ctrl;shift" : S.op("push", { "direction" : "up", "style" : "bar-resize:screenSizeY/2" }),
-  "down:ctrl;shift" : S.op("push", { "direction" : "down", "style" : "bar-resize:screenSizeY/2" }),
-
-  "right:ctrl;shift;alt" : S.op("push", { "direction" : "right", "style" : "bar-resize:screenSizeX*" + MOST }),
-  "left:ctrl;shift;alt" : S.op("push", { "direction" : "left", "style" : "bar-resize:screenSizeX*" + MOST }),
-  */
-
-  //"pad1:alt;cmd" : repos(LEFT, THIRD),
-  //"pad2:alt;cmd" : repos(BOTTOM, HALF),
-  //"pad3:alt;cmd" : repos(RIGHT, THIRD),  
-
-  //"pad4:alt;cmd" : repos(LEFT, HALF),
-  //"pad5:alt;cmd" : repos(CENTER, HALF),
-  //"pad6:alt;cmd" : repos(RIGHT, HALF),
-
-  //"pad7:alt;cmd" : repos(LEFT, MOST),
-  //"pad8:alt;cmd" : repos(TOP, HALF),
-  //"pad9:alt;cmd" : repos(RIGHT, MOST),
-
-
-
-  /*
-  "pad+:alt;cmd" : S.op("resize", { "width" : "+10%", "height" : "+0" }),
-  "pad-:alt;cmd" : S.op("resize", { "width" : "-10%", "height" : "+0" }),
-  */
-
 
   "right:ctrl;alt;cmd" : S.op("throw", { "screen" : "right" }),
   "left:ctrl;alt;cmd" : S.op("throw", { "screen" : "left" }),
