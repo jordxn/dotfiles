@@ -15,11 +15,11 @@ S.cfga({
 });
 
 // Monitors
-var WORK_MON_LEFT = "0"; // work #1
-var WORK_MON_RIGHT = "1"; // work #2
+var WORK_MON_LEFT = "1"; // work #1
+var WORK_MON_RIGHT = "0"; // work #2
 
-var WORK_MON_VERT = "1080x1920"; // work #2
-var LAPTOP_MON = "1080x1920"; // work #2
+var WORK_MON_VERT = "3008x1692"; // work #2
+var LAPTOP_MON = "1680x1050"; // work #2
 
 //var WORK_MON = "1680x1050"; // home
 
