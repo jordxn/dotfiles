@@ -98,8 +98,10 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+function gp() { security find-generic-password -s "$@" -w | tr -d '\n' | pbcopy }
+alias gpsou="git push origin -u `git rev-parse --abbrev-ref HEAD`"
 
-[ -s "/Users/schaanj/.scm_breeze/scm_breeze.sh" ] && source "/Users/schaanj/.scm_breeze/scm_breeze.sh"
+[ -s "~/.scm_breeze/scm_breeze.sh" ] && source "~/.scm_breeze/scm_breeze.sh"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
