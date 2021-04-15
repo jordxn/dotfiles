@@ -99,6 +99,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 function gp() { security find-generic-password -s "$@" -w | tr -d '\n' | pbcopy }
+function gashm() { git stash push -m "$@" }
+
 alias gpsou="git push origin -u `git rev-parse --abbrev-ref HEAD`"
 
 [ -s "~/.scm_breeze/scm_breeze.sh" ] && source "~/.scm_breeze/scm_breeze.sh"
